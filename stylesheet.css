@@ -1,0 +1,75 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 120px red;
+    animation: heart 1s ease-in-out infinite alternate; /* Corrected animation */
+    margin: 20px auto;
+    position: relative; /* Added relative positioning for the heart */
+}
+
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(1.07);
+    }
+
+    100%{
+
+        transform: rotate(-45deg) scale(1.0);
+
+ }
+
+    100% {
+        transform: rotate(-45deg) scale(0.8); /* Adjusted scale for a smoother pulse */
+    }
+}
+
+.heart::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    top: -50%;
+    border-radius: 60px;
+    box-shadow: -10px 10px 120px red;
+}
+
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    right: -50%;
+    border-radius: 60px;
+    box-shadow: -10px 10px 120px red;
+}
+
+.hidden-text {
+    display: none;
+    color: rgb(255, 180, 180);
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0; /* Added consistent margin */
+}
+
+#text1 {
+    order: -1; /* Place text1 above the heart */
+}
+
+#text2 {
+    order: 1; /* Place text2 below the heart */
+}

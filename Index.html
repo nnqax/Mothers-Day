@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Heart</title>
+        <meta name="description" content="Mother's day, Mother, love,march, mother love, daughter">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+
+        <div class="hidden-text" id="text1"><h1>Happy</h1></div>
+        <div class="heart" id="trigger"></div>
+        <div class="hidden-text" id="text2"><h1>Mother's day</h1></div>
+
+        <script >
+       const trigger = document.getElementById('trigger');
+        const text1 = document.getElementById('text1');
+        const text2 = document.getElementById('text2');
+
+        trigger.addEventListener('mouseover', function() {
+            text1.style.display = 'block';
+            text2.style.display = 'block';
+        });
+
+        trigger.addEventListener('mouseout', function() {
+            text1.style.display = 'none';
+            text2.style.display = 'none';
+        });
+        </script>
+    </body>
+</html>

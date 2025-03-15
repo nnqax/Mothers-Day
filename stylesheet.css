@@ -9,6 +9,15 @@ body {
     flex-direction: column;
 }
 
+.begin{
+    color: rgb(255, 0, 0);
+}
+
+.p1{
+    color: rgb(255, 236, 236);
+}
+
+.h2{ color: rgb(255, 130, 130);}
 .heart {
     width: 100px;
     height: 100px;

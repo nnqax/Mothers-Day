@@ -10,24 +10,81 @@
     </head>
     <body>
 
+        <section>
+         <h1 class="begin">Dearest Mom,</h1>
+         <br>
+
+         <pre class="p1">Words often feel inadequate to express the depth of my gratitude and love for you, but on this
+Mother's Day, I want to try. More than just a day on the calendar, this is a moment to truly acknowledge the
+incredible woman you are and the immeasurable impact you've had on my life.</pre>
+<br>
+<pre class="p1">Thinking back, I'm overwhelmed by the countless ways you've shaped me. You've been my constant
+ source of strength, a pillar of unwavering support in every chapter of my journey. You celebrated my triumphs,
+ no matter how small, and held my hand through the inevitable stumbles, offering wisdom and comfort when I needed
+it most. You taught me the value of kindness, the importance of resilience, and the power of unwavering love.</pre>
+    <br>
+
+    <pre class="p1">You've always possessed a unique ability to see the best in me, even when I struggled to see it myself.
+ Your belief in my potential has been a driving force, pushing me to pursue my dreams and strive for more than
+ I thought possible. You've shown me what it means to be selfless, to put the needs of others before your own,
+  and to love unconditionally.</pre>
+    <br>
+
+    <pre class="p1">Beyond the big moments, it's the little things that truly resonate. The warm hugs,
+the comforting meals, the late-night talks, and the quiet moments of understanding. These seemingly
+small gestures have woven a tapestry of love and security that has been the foundation of my life.</pre>
+           <br>
+
+           <pre class="p1">I am so grateful for your patience, your understanding, and your unwavering belief
+in me. You've taught me how to navigate the complexities of life with grace and courage.
+You've shown me what true love looks like, a love that is both fierce and gentle, unwavering and
+unconditional.</pre>
+
+<pre class="p1">Mom, you are more than just a mother; you are my confidante, my best friend, and my guiding
+light. You are the embodiment of strength, love, and compassion. Today, and every day, I celebrate you.</pre>
+               <br>
+
+<pre class="p1">Thank you for everything. I love you more than words can say. Happy Mother's Day.</pre>
+                               <br>
+<h1 class="begin">With all my love,</h1>
+<h3 class="h2">Noor Hanafi</h3>
+
+
+<br>
+<br>
+<br>
+
+        </section>
+
+
+        <section>
         <div class="hidden-text" id="text1"><h1>Happy</h1></div>
         <div class="heart" id="trigger"></div>
         <div class="hidden-text" id="text2"><h1>Mother's day</h1></div>
+        </section>
+
+
+
+
 
         <script >
        const trigger = document.getElementById('trigger');
-        const text1 = document.getElementById('text1');
-        const text2 = document.getElementById('text2');
+const text1 = document.getElementById('text1');
+const text2 = document.getElementById('text2');
 
-        trigger.addEventListener('mouseover', function() {
-            text1.style.display = 'block';
-            text2.style.display = 'block';
-        });
+let isVisible = false; // Track the visibility state
 
-        trigger.addEventListener('mouseout', function() {
-            text1.style.display = 'none';
-            text2.style.display = 'none';
-        });
+trigger.addEventListener('click', function() {
+  if (isVisible) {
+    text1.style.display = 'none';
+    text2.style.display = 'none';
+    isVisible = false;
+  } else {
+    text1.style.display = 'block';
+    text2.style.display = 'block';
+    isVisible = true;
+  }
+});
         </script>
     </body>
 </html>

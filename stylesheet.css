@@ -9,6 +9,18 @@ body {
     flex-direction: column;
 }
 
+.dancing-script-<uniquifier> {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 480;
+    font-style: normal;
+  }
+.herr-von-muellerhoff-regular {
+    font-family: "Herr Von Muellerhoff", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
 section {
     max-width: 800px;
     margin: 0 auto;
@@ -18,6 +30,9 @@ section {
     font-size: 2em;
             margin-bottom: 20px;
     color: rgb(255, 0, 0);
+    font-family: "Herr Von Muellerhoff", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .p1{
@@ -31,7 +46,13 @@ section {
 }
 
 .h2{ color: rgb(255, 130, 130);
-    margin-top: 10px;}
+    margin-top: 10px;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 480;
+    font-style: normal;
+
+}
 .heart {
     width: 100px;
     height: 100px;
@@ -87,6 +108,9 @@ section {
     padding: 10px;
     text-align: center;
     margin: 10px 0; /* Added consistent margin */
+    font-family: "Herr Von Muellerhoff", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #text1 {

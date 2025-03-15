@@ -22,26 +22,28 @@
 
 
 
-
+        <br>
+        <br>
+        <br>
+         <br>
 
         <section>
          <h1 class="begin">Dearest Mom,</h1>
          <br>
+         <br>
+         <br>
+         <br>
+         <br>
+         <br>
 
          <pre class="p1">Words often feel inadequate to express the depth of my gratitude and love for you, but on this
-Mother's Day, I want to try. More than just a day on the calendar, this is a moment to truly acknowledge the
-incredible woman you are and the immeasurable impact you've had on my life.</pre>
+Mother's Day, I want to try. More than just a day on the calendar, this is a moment to truly acknowledge the incredible woman you are and the immeasurable impact you've had on my life.</pre>
 <br>
 <pre class="p1">Thinking back, I'm overwhelmed by the countless ways you've shaped me. You've been my constant
- source of strength, a pillar of unwavering support in every chapter of my journey. You celebrated my triumphs,
- no matter how small, and held my hand through the inevitable stumbles, offering wisdom and comfort when I needed
-it most. You taught me the value of kindness, the importance of resilience, and the power of unwavering love.</pre>
+ source of strength, a pillar of unwavering support in every chapter of my journey. You celebrated my triumphs, no matter how small, and held my hand through the inevitable stumbles, offering wisdom and comfort when I needed it most. You taught me the value of kindness, the importance of resilience, and the power of unwavering love.</pre>
     <br>
 
-    <pre class="p1">You've always possessed a unique ability to see the best in me, even when I struggled to see it myself.
- Your belief in my potential has been a driving force, pushing me to pursue my dreams and strive for more than
- I thought possible. You've shown me what it means to be selfless, to put the needs of others before your own,
-  and to love unconditionally.</pre>
+    <pre class="p1">You've always possessed a unique ability to see the best in me, even when I struggled to see it myself.Your belief in my potential has been a driving force, pushing me to pursue my dreams and strive for more than I thought possible. You've shown me what it means to be selfless, to put the needs of others before your own,and to love unconditionally.</pre>
     <br>
 
     <pre class="p1">Beyond the big moments, it's the little things that truly resonate. The warm hugs,
@@ -71,7 +73,7 @@ light. You are the embodiment of strength, love, and compassion. Today, and ever
                                 <br>
                                 <br>
 
-<h1 class="begin">With all my love,</h1>
+<h1 class="ending">With all my love,</h1>
 <h3 class="h2">Noor Hanafi</h3>
 
 
@@ -89,23 +91,52 @@ light. You are the embodiment of strength, love, and compassion. Today, and ever
 <br>
 
         <script >
-       const trigger = document.getElementById('trigger');
+
+const p1Elements = document.querySelectorAll('.p1');
+const h2Elements = document.querySelectorAll('.h2');
+const hiddenElements = document.querySelectorAll('.hidden-text');
+const heartElement = document.querySelector('.heart');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+p1Elements.forEach((element) => {
+    observer.observe(element);
+});
+
+h2Elements.forEach((element) => {
+    observer.observe(element);
+});
+
+hiddenElements.forEach((element) => {
+    observer.observe(element);
+});
+
+observer.observe(heartElement);
+
+const trigger = document.getElementById('trigger');
+
+
+
 const text1 = document.getElementById('text1');
 const text2 = document.getElementById('text2');
-
 let isVisible = false; // Track the visibility state
-
 trigger.addEventListener('click', function() {
-  if (isVisible) {
-    text1.style.display = 'none';
-    text2.style.display = 'none';
-    isVisible = false;
-  } else {
-    text1.style.display = 'block';
-    text2.style.display = 'block';
-    isVisible = true;
-  }
-
+if (isVisible) {
+text1.style.display = 'none';
+text2.style.display = 'none';
+isVisible = false;
+} else {
+text1.style.display = 'block';
+text2.style.display = 'block';
+isVisible = true;
+}
 });
         </script>
     </body>

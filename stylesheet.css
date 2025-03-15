@@ -1,3 +1,4 @@
+
 body {
     background-color: black;
     margin: 0;
@@ -8,56 +9,77 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-.dancing-script{
+
+.dancing-script {
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight: 480;
     font-style: normal;
-  }
+}
+
 .herr-von-muellerhoff-regular {
     font-family: "Herr Von Muellerhoff", cursive;
     font-weight: 400;
     font-style: normal;
-  }
+}
 
 section {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.begin{
-    font-size: 2em;
-            margin-bottom: 20px;
+.begin {
+    font-size: 12em;
+    margin-bottom: 20px;
     color: rgb(255, 0, 0);
     font-family: "Herr Von Muellerhoff", cursive;
     font-weight: 400;
     font-style: normal;
 }
 
-.p1{
-    font-size: 1.1em;
-            line-height: 1.6;
-            text-align: left;
-            white-space: pre-wrap;
-            margin-bottom: 15px;
-            padding: 0 10px;
-    color: rgb(255, 236, 236);
-}
-
-.h2{ color: rgb(255, 130, 130);
-    margin-top: 10px;
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-weight: 480;
+.ending {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: rgb(255, 0, 0);
+    font-family: "Herr Von Muellerhoff", cursive;
+    font-weight: 400;
     font-style: normal;
-
 }
+
+.p1, .h2,  .hidden-text {
+    font-size: 1.1em;
+    text-align: left;
+    white-space: pre-wrap;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    color: rgb(255, 236, 236);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+
+.p1.visible, .h2.visible,  .hidden-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.h2 {
+    color: rgb(255, 130, 130);
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-family: "Herr Von Muellerhoff", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .heart {
     width: 100px;
     height: 100px;
     background: red;
     transform: rotate(-45deg);
-    box-shadow: -10px 10px 120px red;
+    box-shadow: 0px 0px 120px red;
     animation: heart 1s ease-in-out infinite alternate; /* Corrected animation */
     margin: 20px auto;
     position: relative; /* Added relative positioning for the heart */
@@ -87,7 +109,7 @@ section {
     background: red;
     top: -50%;
     border-radius: 60px;
-    box-shadow: -10px 10px 120px red;
+    box-shadow: 0px 0px 120px red;
 }
 
 .heart::after {

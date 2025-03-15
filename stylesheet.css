@@ -8,8 +8,7 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-
-.dancing-script-<uniquifier> {
+.dancing-script{
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;
     font-weight: 480;
